@@ -1,0 +1,12 @@
+/home/tanay24/AOS/lab_2/AOS_NUFS/networked_file_system/target/debug/deps/serde-c438e412d4612c1c.d: /home/tanay24/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /home/tanay24/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /home/tanay24/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /home/tanay24/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /home/tanay24/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /home/tanay24/AOS/lab_2/AOS_NUFS/networked_file_system/target/debug/build/serde-f38b255d54569d39/out/private.rs
+
+/home/tanay24/AOS/lab_2/AOS_NUFS/networked_file_system/target/debug/deps/libserde-c438e412d4612c1c.rmeta: /home/tanay24/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /home/tanay24/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /home/tanay24/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /home/tanay24/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /home/tanay24/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /home/tanay24/AOS/lab_2/AOS_NUFS/networked_file_system/target/debug/build/serde-f38b255d54569d39/out/private.rs
+
+/home/tanay24/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs:
+/home/tanay24/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs:
+/home/tanay24/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs:
+/home/tanay24/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs:
+/home/tanay24/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs:
+/home/tanay24/AOS/lab_2/AOS_NUFS/networked_file_system/target/debug/build/serde-f38b255d54569d39/out/private.rs:
+
+# env-dep:OUT_DIR=/home/tanay24/AOS/lab_2/AOS_NUFS/networked_file_system/target/debug/build/serde-f38b255d54569d39/out

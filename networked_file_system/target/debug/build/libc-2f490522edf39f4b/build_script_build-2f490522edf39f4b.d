@@ -1,0 +1,5 @@
+/home/tanay24/AOS/lab_2/AOS_NUFS/networked_file_system/target/debug/build/libc-2f490522edf39f4b/build_script_build-2f490522edf39f4b.d: /home/tanay24/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.176/build.rs
+
+/home/tanay24/AOS/lab_2/AOS_NUFS/networked_file_system/target/debug/build/libc-2f490522edf39f4b/build_script_build-2f490522edf39f4b: /home/tanay24/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.176/build.rs
+
+/home/tanay24/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.176/build.rs:
