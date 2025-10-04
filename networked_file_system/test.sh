@@ -11,4 +11,4 @@ if [[ -d "$CACHE_DIR" ]]; then
     find "$CACHE_DIR" -mindepth 1 -maxdepth 1 -exec rm -rf -- {} +
 fi
 
-sudo ./target/debug/client /mnt/netfs/ tanay24@pc733.emulab.net:/users/tanay24/fs_dir
+sudo ./target/debug/client /mnt/netfs/ tanay24@c220g5-110410.wisc.cloudlab.us:/tmp/fs_dir

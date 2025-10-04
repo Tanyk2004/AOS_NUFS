@@ -23,36 +23,18 @@ cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
 cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
 cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
 cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
-cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
-cargo:rerun-if-env-changed=SYSROOT
-cargo:rerun-if-env-changed=ZLIB_STATIC
-cargo:rerun-if-env-changed=ZLIB_DYNAMIC
-cargo:rerun-if-env-changed=PKG_CONFIG_ALL_STATIC
-cargo:rerun-if-env-changed=PKG_CONFIG_ALL_DYNAMIC
-cargo:rustc-link-lib=z
-cargo:rerun-if-env-changed=PKG_CONFIG_x86_64-unknown-linux-gnu
-cargo:rerun-if-env-changed=PKG_CONFIG_x86_64_unknown_linux_gnu
-cargo:rerun-if-env-changed=HOST_PKG_CONFIG
-cargo:rerun-if-env-changed=PKG_CONFIG
-cargo:rerun-if-env-changed=ZLIB_STATIC
-cargo:rerun-if-env-changed=ZLIB_DYNAMIC
-cargo:rerun-if-env-changed=PKG_CONFIG_ALL_STATIC
-cargo:rerun-if-env-changed=PKG_CONFIG_ALL_DYNAMIC
-cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
-cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
-cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
-cargo:rerun-if-env-changed=PKG_CONFIG_PATH
-cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
-cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
-cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
-cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
-cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
-cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
-cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
-cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
-cargo:include=/usr/include
+cargo:warning=Could not find zlib include paths via pkg-config: 
+pkg-config exited with status code 1
+> PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags zlib
+
+The system library `zlib` required by crate `libz-sys` was not found.
+The file `zlib.pc` needs to be installed and the PKG_CONFIG_PATH environment variable must contain its parent directory.
+The PKG_CONFIG_PATH environment variable is not set.
+
+HINT: if you have installed the library, try setting PKG_CONFIG_PATH to the directory containing `zlib.pc`.
+
 OPT_LEVEL = Some(0)
-OUT_DIR = Some(/home/tanay24/AOS/lab_2/AOS_NUFS/networked_file_system/target/debug/build/libz-sys-f693ec0b2b20dad6/out)
+OUT_DIR = Some(/users/tanay24/AOS_NUFS/networked_file_system/target/debug/build/libz-sys-f693ec0b2b20dad6/out)
 TARGET = Some(x86_64-unknown-linux-gnu)
 HOST = Some(x86_64-unknown-linux-gnu)
 cargo:rerun-if-env-changed=CC_x86_64-unknown-linux-gnu
@@ -79,4 +61,24 @@ cargo:rerun-if-env-changed=CFLAGS_x86_64-unknown-linux-gnu
 CFLAGS_x86_64-unknown-linux-gnu = None
 CARGO_ENCODED_RUSTFLAGS = Some()
 running LC_ALL="C" "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-4" "-fno-omit-frame-pointer" "-m64" "-Wall" "-Wextra" "src/smoke.c" "-g0" "-o" "/dev/null" "-lz"
-cargo:rustc-link-lib=z
+cargo:rerun-if-env-changed=AR_x86_64-unknown-linux-gnu
+AR_x86_64-unknown-linux-gnu = None
+cargo:rerun-if-env-changed=AR_x86_64_unknown_linux_gnu
+AR_x86_64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=HOST_AR
+HOST_AR = None
+cargo:rerun-if-env-changed=AR
+AR = None
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+cargo:rerun-if-env-changed=HOST_ARFLAGS
+HOST_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS_x86_64_unknown_linux_gnu
+ARFLAGS_x86_64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=ARFLAGS_x86_64-unknown-linux-gnu
+ARFLAGS_x86_64-unknown-linux-gnu = None
+cargo:rustc-link-lib=static=z
+cargo:rustc-link-search=native=/users/tanay24/AOS_NUFS/networked_file_system/target/debug/build/libz-sys-f693ec0b2b20dad6/out/lib
+cargo:root=/users/tanay24/AOS_NUFS/networked_file_system/target/debug/build/libz-sys-f693ec0b2b20dad6/out
+cargo:rustc-link-search=native=/users/tanay24/AOS_NUFS/networked_file_system/target/debug/build/libz-sys-f693ec0b2b20dad6/out/lib
+cargo:include=/users/tanay24/AOS_NUFS/networked_file_system/target/debug/build/libz-sys-f693ec0b2b20dad6/out/include

@@ -5,10 +5,10 @@
 # SPDX-License-Identifier: BSD-3-Clause
 ###########################################################################
 
-prefix=/home/tanay24/AOS/lab_2/AOS_NUFS/networked_file_system/target/debug/build/libssh2-sys-28ab0b6967a6dcb1/out
+prefix=/users/tanay24/AOS_NUFS/networked_file_system/target/debug/build/libssh2-sys-28ab0b6967a6dcb1/out
 exec_prefix=
-libdir=/home/tanay24/AOS/lab_2/AOS_NUFS/networked_file_system/target/debug/build/libssh2-sys-28ab0b6967a6dcb1/out/lib
-includedir=/home/tanay24/AOS/lab_2/AOS_NUFS/networked_file_system/target/debug/build/libssh2-sys-28ab0b6967a6dcb1/out/include
+libdir=/users/tanay24/AOS_NUFS/networked_file_system/target/debug/build/libssh2-sys-28ab0b6967a6dcb1/out/lib
+includedir=/users/tanay24/AOS_NUFS/networked_file_system/target/debug/build/libssh2-sys-28ab0b6967a6dcb1/out/include
 
 Name: libssh2
 URL: https://libssh2.org/

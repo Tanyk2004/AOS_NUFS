@@ -1,9 +1,9 @@
 use fuser::{
-    FileAttr, FileType, Filesystem, MountOption, ReplyAttr, ReplyData, ReplyDirectory, ReplyEntry,
-    ReplyOpen, ReplyWrite, Request, TimeOrNow,
+    FileAttr, FileType, Filesystem, MountOption, ReplyAttr, ReplyData, ReplyEntry,
+    ReplyOpen, ReplyWrite, Request, 
 };
 
-use ssh2::{Agent, Session, Sftp};
+use ssh2::{Session, Sftp};
 
 use libc::{
     EACCES, EEXIST, EINVAL, EIO, ENOENT, ENOTDIR, O_ACCMODE, O_RDONLY, O_RDWR, O_WRONLY, write,
@@ -12,20 +12,19 @@ use libc::{
 use core::str;
 use std::{
     collections::HashMap,
-    env::ArgsOs,
     ffi::OsStr,
     fs::{self, File, OpenOptions},
     io::{Read, Seek, SeekFrom, Write},
-    os::unix::fs::MetadataExt,
     path::{Path, PathBuf},
     sync::{Arc, Mutex},
     time::{Duration, SystemTime},
 };
+const COPY_CHUNK: usize = 1 << 20; // 1 MiB
 
 const TTL: Duration = Duration::from_secs(1); // 1 second
 const ROOT_INODE: u64 = 1;
 const CACHE_PATH: &str = "/var/tmp/tulfs_cache";
-const PRIVATE_KEY: &str = "/home/tanay24/.ssh/networked_fs";
+const PRIVATE_KEY: &str = "/users/tanay24/.ssh/network_fs";
 
 struct OpenEntry {
     file: File,
@@ -120,10 +119,10 @@ impl TULFS {
 
     // Adds backing_root as prefix to path
     fn get_remote_abs_path(&self, rel: &Path) -> PathBuf {
-        println!(
-            "get_remote_abs_path: path = {:?} Backing Root: {:?}",
-            rel, self.backing_root
-        );
+        // println!(
+        //     "get_remote_abs_path: path = {:?} Backing Root: {:?}",
+        //     rel, self.backing_root
+        // );
         let mut remote_path = self.backing_root.clone();
 
         // append each component of path to remote_path
@@ -133,7 +132,7 @@ impl TULFS {
             remote_path.push(component.as_os_str());
         }
 
-        println!("Remote absolute path: {:?}", remote_path);
+        // println!("Remote absolute path: {:?}", remote_path);
         remote_path
     }
 
@@ -171,18 +170,18 @@ impl TULFS {
      *  Takes in relative path and returns inode number.
      */
     fn inode_for_path(&self, rel_path: &Path) -> u64 {
-        println!("inode_for_path: path = {:?}", rel_path);
+        // println!("inode_for_path: path = {:?}", rel_path);
 
         let rel_path = rel_path.strip_prefix("/").unwrap_or(&rel_path).to_path_buf();
         let resolved_path = rel_path.to_str();
         let binding = PathBuf::from("/");
         let canonical_root = binding.to_str();
-        println!("resolved_path: {:?}, canonical_root: {:?}", resolved_path, canonical_root);
+        // println!("resolved_path: {:?}, canonical_root: {:?}", resolved_path, canonical_root);
         if resolved_path == canonical_root {
             return ROOT_INODE;
         }
         if let Some(&ino) = self.st.lock().unwrap().path_to_inode.get(&rel_path) {
-            println!("Found inode: {:?} for path: {:?}", ino, rel_path);
+            // println!("Found inode: {:?} for path: {:?}", ino, rel_path);
             return ino;
         }
 
@@ -190,7 +189,7 @@ impl TULFS {
         let d = md5::compute(resolved_path.unwrap().as_bytes()); // I don't want to bother with inode number collisions 
         let ino = u64::from_be_bytes([d[0], d[1], d[2], d[3], d[4], d[5], d[6], d[7]]);
         let mut st = self.st.lock().unwrap();
-        println!("Inserting mapping: ino = {:?} rel_path: {:?}", ino, rel_path);
+        // println!("Inserting mapping: ino = {:?} rel_path: {:?}", ino, rel_path);
         st.path_to_inode.insert(PathBuf::from(&rel_path), ino);
         st.inode_to_path.insert(ino, PathBuf::from(&rel_path));
         ino
@@ -201,7 +200,7 @@ impl TULFS {
             return Some(PathBuf::from("/"));
         }
         let st = self.st.lock().unwrap();
-        println!("Does inode_to_path contain key {}? {}", ino, st.inode_to_path.contains_key(&ino));
+        // println!("Does inode_to_path contain key {}? {}", ino, st.inode_to_path.contains_key(&ino));
         if !st.inode_to_path.contains_key(&ino) {
             return None;
         }
@@ -218,9 +217,9 @@ impl TULFS {
      * - Result<FileAttr, libc::c_int> - Ok(FileAttr) if successful
      */
     fn attr_from_remote(&self, rel: PathBuf, ino: u64) -> Result<FileAttr, libc::c_int> {
-        println!("attr_from_remote: rel = {:?}", rel);
+        // println!("attr_from_remote: rel = {:?}", rel);
         let full_path = self.get_remote_abs_path(&rel);
-        println!("attr_from_remote: full_path = {:?}", full_path);
+        // println!("attr_from_remote: full_path = {:?}", full_path);
         let stat = self.sftp.stat(&full_path).map_err(|_| ENOENT)?;
         let now = SystemTime::now();
         let uid = stat
@@ -269,44 +268,58 @@ impl TULFS {
         })
     }
 
-    fn fetch_file_from_remote(&self, path: &Path) -> Result<File, libc::c_int> {
-        let local_path = self.get_local_abs_path(&path);
-        let remote_path = self.get_remote_abs_path(&path);
-        println!("Fetching file from remote server: {:?}", remote_path);
-        let mut remote_file = match self.sftp.open(&remote_path) {
-            Ok(f) => f,
-            Err(_) => {
-                eprintln!("File not found on remote server: {:?}", remote_path);
-                return Err(ENOENT);
-            }
-        };
-        let mut local_file = match OpenOptions::new()
-            .create(true)
-            .write(true)
-            .truncate(true)
-            .open(&local_path)
-        {
-            Ok(f) => f,
-            Err(_) => {
-                eprintln!("Failed to open local file: {:?}", local_path);
-                return Err(EIO);
-            }
-        };
+const COPY_CHUNK: usize = 1 << 20; // 1 MiB
 
-        println!("Copying file to local cache: {:?}", local_path);
-        if let Err(_) = std::io::copy(&mut remote_file, &mut local_file) {
-            eprintln!("Failed to copy file to local cache: {:?}", local_path);
-            return Err(EIO);
+fn fetch_file_from_remote(&self, path: &Path) -> Result<std::fs::File, libc::c_int> {
+    let local_path = self.get_local_abs_path(path);
+    let tmp_path = local_path.with_extension("part");
+    let remote_path = self.get_remote_abs_path(path);
+
+    // Open remote for reading
+    let mut remote_file = self.sftp
+        .open(&remote_path)
+        .map_err(|_| {
+            eprintln!("Remote missing: {:?}", remote_path);
+            libc::ENOENT
+        })?;
+
+    // Make sure parent exists
+    if let Some(p) = local_path.parent() {
+        if let Err(e) = std::fs::create_dir_all(p) {
+            eprintln!("create_dir_all {:?}: {e}", p);
+            return Err(libc::EIO);
         }
-
-        // Ensure data is flushed to disk
-        if let Err(_) = local_file.flush() {
-            eprintln!("Failed to flush local file: {:?}", local_path);
-            return Err(EIO);
-        }
-
-        Ok(local_file)
     }
+
+    // Write to a temp file first
+    let mut local_tmp = OpenOptions::new()
+        .create(true).write(true).truncate(true)
+        .open(&tmp_path)
+        .map_err(|_| {
+            eprintln!("Open local temp failed: {:?}", tmp_path);
+            libc::EIO
+        })?;
+
+    // Stream copy with a big buffer
+    let mut buf = vec![0u8; COPY_CHUNK];
+    loop {
+        let n = remote_file.read(&mut buf).map_err(|_| libc::EIO)?;
+        if n == 0 { break; }
+        local_tmp.write_all(&buf[..n]).map_err(|_| libc::EIO)?;
+    }
+
+    // Ensure data hits disk before publish
+    local_tmp.sync_all().ok();
+
+    // Atomically replace (avoid torn readers)
+    std::fs::rename(&tmp_path, &local_path).map_err(|_| libc::EIO)?;
+
+    // Reopen for normal use (start at offset 0)
+    let mut final_f = OpenOptions::new().read(true).write(true).open(&local_path).map_err(|_| libc::EIO)?;
+    final_f.seek(SeekFrom::Start(0)).ok();
+    Ok(final_f)
+}
+
 
     fn copy_from_local_to_remote(
         &self,
@@ -340,7 +353,7 @@ impl TULFS {
             return Err(EIO);
         }
 
-        println!("Buffer Contents: {:?}", buffer);
+        // println!("Buffer Contents: {:?}", buffer);
 
         if let Err(_) = remote_file.write_all(&buffer) {
             eprintln!("Failed to write to remote file: {:?}", remote_path);
@@ -365,7 +378,7 @@ impl TULFS {
                 };
                 let remote_path = self.get_remote_abs_path(&path);
                 let local_path = self.get_local_abs_path(&path);
-                println!("Flushing dirty file to remote server: {:?}", remote_path);
+                // println!("Flushing dirty file to remote server: {:?}", remote_path);
                 let local_file = match OpenOptions::new().read(true).open(&local_path) {
                     Ok(f) => f,
                     Err(_) => {
@@ -394,8 +407,8 @@ impl Filesystem for TULFS {
     }
 
     fn getattr(&mut self, _req: &Request<'_>, ino: u64, reply: ReplyAttr) {
-        println!("getattr");
-        println!("ino: {}", ino);
+        // println!("getattr");
+        // println!("ino: {}", ino);
         if ino == ROOT_INODE {
             reply.attr(&TTL, &self.root_attr());
             return;
@@ -405,7 +418,7 @@ impl Filesystem for TULFS {
                 return;
             };
 
-            println!("Path for inode {}: {:?}", ino, path);
+            // println!("Path for inode {}: {:?}", ino, path);
             let rel = path.strip_prefix("/").unwrap_or(&path);
             match self.attr_from_remote(rel.to_path_buf(), ino) {
                 Ok(attr) => reply.attr(&TTL, &attr),
@@ -415,8 +428,8 @@ impl Filesystem for TULFS {
     }
 
     fn lookup(&mut self, _req: &Request<'_>, parent: u64, name: &OsStr, reply: ReplyEntry) {
-        print!("lookup\n");
-        println!("parent: {}, name: {:?}", parent, name);
+        // print!("lookup\n");
+        // println!("parent: {}, name: {:?}", parent, name);
 
         // check if parent inode exists
         if !self.path_for_inode(parent).is_some() {
@@ -437,7 +450,7 @@ impl Filesystem for TULFS {
         let child_path = parent_path.join(name);
         let ino = self.inode_for_path(&child_path);
 
-        println!("Child path: {:?}", child_path);
+        // println!("Child path: {:?}", child_path);
         if let Some(attr) = self
             .attr_from_remote(
                 child_path
@@ -450,14 +463,14 @@ impl Filesystem for TULFS {
         {
             reply.entry(&TTL, &attr, 0); // We are not reusing inode numbers keep generation to 0 for now
         } else {
-            println!("File not found on remote server");
+            // println!("File not found on remote server");
             reply.error(ENOENT);
         }
     }
 
     fn open(&mut self, _req: &Request<'_>, _ino: u64, _flags: i32, reply: ReplyOpen) {
-        print!("open\n");
-        println!("ino: {}, flags: {}", _ino, _flags);
+        // print!("open\n");
+        // println!("ino: {}, flags: {}", _ino, _flags);
 
         // check if inode exists
         if !self.path_for_inode(_ino).is_some() {
@@ -469,19 +482,22 @@ impl Filesystem for TULFS {
             reply.error(ENOENT);
             return;
         };
-        println!("Path for inode {}: {:?}", _ino, path);
+        // println!("Path for inode {}: {:?}", _ino, path);
 
         // if the first character of the path is '/', remove it
         let path = path.strip_prefix("/").unwrap_or(&path).to_path_buf();
 
         // fetch file from remote server if it doesn't exist in local cache
         let local_path = self.get_local_abs_path(&path);
-        println!("Local path: {:?}", local_path);
+        // println!("Local path: {:?}", local_path);
         let mut _fh = 0;
         let mut local_flags = _flags as u32;
         if !local_path.exists() {
             std::fs::create_dir_all(local_path.parent().unwrap()).unwrap();
+            println!("File not found in local cache, fetching from remote server");
             let res = self.fetch_file_from_remote(&path);
+            println!("Fetched file from remote server");
+
             if let Err(e) = res {
                 reply.error(e);
                 return;
@@ -524,6 +540,7 @@ impl Filesystem for TULFS {
                 .read(true)
                 .write(write_access)
                 .open(&local_path);
+
             if local_file.is_err() {
                 reply.error(EIO);
                 return;
@@ -544,6 +561,7 @@ impl Filesystem for TULFS {
             drop(st);
             println!("Opened file {:?} with fh {} as read only", local_path, _fh);
         }
+        println!("Successfully opened file with fh {}", _fh);
         reply.opened(_fh, local_flags);
     }
 
@@ -559,17 +577,17 @@ impl Filesystem for TULFS {
         lock_owner: Option<u64>,
         reply: ReplyWrite,
     ) {
-        print!("write\n");
-        println!(
-            "ino: {}, fh: {}, offset: {}, size: {}, write_flags: {}, flags: {}, lock_owner: {:?}",
-            ino,
-            fh,
-            offset,
-            data.len(),
-            write_flags,
-            flags,
-            lock_owner
-        );
+        // print!("write\n");
+        // println!(
+            // "ino: {}, fh: {}, offset: {}, size: {}, write_flags: {}, flags: {}, lock_owner: {:?}",
+            // ino,
+            // fh,
+            // offset,
+            // data.len(),
+            // write_flags,
+            // flags,
+            // lock_owner
+        // );
 
         let mut st = self.st.lock().unwrap();
         let open_entry = match st.open_files.get_mut(&fh) {
@@ -593,8 +611,8 @@ impl Filesystem for TULFS {
             return;
         }
 
-        println!("Writing {} bytes at offset {}", data.len(), offset);
-        println!("Data Contents: {:?}", data);
+        // println!("Writing {} bytes at offset {}", data.len(), offset);
+        // println!("Data Contents: {:?}", data);
 
         // Write the data
         match open_entry.file.write(data) {
@@ -619,12 +637,12 @@ impl Filesystem for TULFS {
         lock_owner: Option<u64>,
         reply: ReplyData,
     ) {
-        println!("read");
-        println!(
-            "ino: {}, fh: {}, offset: {}, size: {}, flags: {}, lock_owner: {:?}",
-            ino, fh, offset, size, flags, lock_owner
-        );
-        let mut file = {
+        // println!("read");
+        // println!(
+            // "ino: {}, fh: {}, offset: {}, size: {}, flags: {}, lock_owner: {:?}",
+            // ino, fh, offset, size, flags, lock_owner
+        // );
+     let mut file = {
             let st = self.st.lock().unwrap();
             match st.open_files.get(&fh) {
                 Some(entry) => entry.file.try_clone().unwrap(),
@@ -661,7 +679,7 @@ impl Filesystem for TULFS {
         reply: fuser::ReplyEmpty,
     ) {
         print!("flush\n");
-        println!("ino: {}, fh: {}, lock_owner: {}", ino, fh, lock_owner);
+        // println!("ino: {}, fh: {}, lock_owner: {}", ino, fh, lock_owner);
 
         // Snapshot needed info under the lock without holding a mutable borrow across IO
         let (is_dirty, entry_ino) = {
@@ -688,11 +706,11 @@ impl Filesystem for TULFS {
             }
         };
         // reaching
-        println!("Path from inode {:?}", path);
+        // println!("Path from inode {:?}", path);
         let path = path.strip_prefix("/").unwrap_or(&path).to_path_buf();
         let remote_path = self.get_remote_abs_path(&path);
         let local_path = self.get_local_abs_path(&path);
-        println!("Flushing dirty file to remote server: {:?}", remote_path);
+        // println!("Flushing dirty file to remote server: {:?}", remote_path);
         let local_file = match OpenOptions::new().read(true).open(&local_path) {
             Ok(f) => f,
             Err(_) => {
@@ -729,8 +747,8 @@ impl Filesystem for TULFS {
         _flush: bool,
         reply: fuser::ReplyEmpty,
     ) {
-        print!("release\n");
-        println!("ino: {}, fh: {}", _ino, _fh);
+        // print!("release\n");
+        // println!("ino: {}, fh: {}", _ino, _fh);
 
         let (is_dirty, entry_ino) = {
             let st = self.st.lock().unwrap();
@@ -742,7 +760,7 @@ impl Filesystem for TULFS {
                 }
             }
         };
-        println!("is_dirty: {}, entry_ino: {}", is_dirty, entry_ino);
+        // println!("is_dirty: {}, entry_ino: {}", is_dirty, entry_ino);
         let path = match self.path_for_inode(entry_ino) {
             Some(p) => p,
             None => {
@@ -751,13 +769,13 @@ impl Filesystem for TULFS {
             }
         };
 
-        println!("Path from inode {:?}", path);
+        // println!("Path from inode {:?}", path);
         let path  = path.strip_prefix("/").unwrap_or(&path).to_path_buf();
         if is_dirty {
             let path = path.strip_prefix("/").unwrap_or(&path).to_path_buf();
             let remote_path = self.get_remote_abs_path(&path);
             let local_path = self.get_local_abs_path(&path);
-            println!("Flushing dirty file to remote server: {:?}", remote_path);
+            // println!("Flushing dirty file to remote server: {:?}", remote_path);
             let local_file = match OpenOptions::new().read(true).open(&local_path) {
                 Ok(f) => f,
                 Err(_) => {
@@ -784,9 +802,9 @@ impl Filesystem for TULFS {
             reply.ok();
             return;
         }
-        println!("Removing inode to path mapping for inode {}", entry_ino);
+        // println!("Removing inode to path mapping for inode {}", entry_ino);
         st.inode_to_path.remove(&_ino);
-        println!("Removing path to inode mapping for path {:?}", path);
+        // println!("Removing path to inode mapping for path {:?}", path);
         st.path_to_inode.remove(&path);
         drop(st);
 
@@ -798,14 +816,66 @@ impl Filesystem for TULFS {
                 // Not a critical error, so we don't return here
             }
         }
-        println!("Deleted local cached file: {:?}", local_path);
+        // println!("Deleted local cached file: {:?}", local_path);
 
         reply.ok();
     }
+
+    fn lseek(
+            &mut self,
+            _req: &Request<'_>,
+            ino: u64,
+            fh: u64,
+            offset: i64,
+            whence: i32,
+            reply: fuser::ReplyLseek,
+        ) {
+        print!("lseek\n");
+
+        let mut st = self.st.lock().unwrap();
+        let open_entry = match st.open_files.get_mut(&fh) {
+            Some(entry) => entry,
+            None => {
+                reply.error(EINVAL);
+                return;
+            }
+        };
+        let new_offset = match whence {
+            libc::SEEK_SET => offset,
+            libc::SEEK_CUR => {
+                match open_entry.file.seek(SeekFrom::Current(0)) {
+                    Ok(pos) => pos as i64 + offset,
+                    Err(_) => {
+                        reply.error(EIO);
+                        return;
+                    }
+                }
+            }
+            libc::SEEK_END => {
+                match open_entry.file.seek(SeekFrom::End(0)) {
+                    Ok(pos) => pos as i64 + offset,
+                    Err(_) => {
+                        reply.error(EIO);
+                        return;
+                    }
+                }
+            }
+            _ => {
+                reply.error(EINVAL);
+                return;
+            }
+        };
+        if new_offset < 0 {
+            reply.error(EINVAL);
+            return;
+        }
+        match open_entry.file.seek(SeekFrom::Start(new_offset as u64)) {
+            Ok(pos) => reply.offset(pos as i64),
+            Err(_) => reply.error(EIO),
+        }
+    }
 }
 
-// ! ISSUE: Right now if I run the test program twice without shutting down the fuse client then 
-// ! I get an error where inode_to_path doesn't contain the inode even though it should.
 
 fn extract_hostname_and_path(backing: &str) -> Option<(&str, &str)> {
     if (!backing.contains(':')) {
@@ -821,7 +891,7 @@ fn extract_hostname_and_path(backing: &str) -> Option<(&str, &str)> {
 
 fn main() {
     let args: Vec<_> = std::env::args_os().skip(1).collect();
-    println!("Args {:?}", args);
+    // println!("Args {:?}", args);
     if (args.len() != 2) {
         eprintln!("Usage: client <mountpoint> <user@host:backing_directory>");
         std::process::exit(1);
@@ -855,6 +925,14 @@ fn main() {
         MountOption::FSName("TULFS".into()),
         MountOption::AutoUnmount,
         MountOption::DefaultPermissions,
+        MountOption::CUSTOM("writeback_cache".into()),
+        MountOption::CUSTOM("async_read".into()),
+        MountOption::CUSTOM("max_read=1048576".into()), // 1 MB
+        MountOption::CUSTOM("max_write=1048576".into()), // 1 MB
+        MountOption::CUSTOM("max_readahead=1048576".into()), //
+        MountOption::CUSTOM("max_background=64".into()),
+        MountOption::CUSTOM("congestion_threshold=32".into()),
+        
     ];
 
     let tulfs = TULFS::new(hostname.to_string(), backing_root);
