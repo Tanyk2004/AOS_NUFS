@@ -1,0 +1,607 @@
+reading from file tcpdump.pcap, link-type EN10MB (Ethernet), snapshot length 262144
+11:40:37.574990 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 3355603304:3355603404, ack 1610264629, win 9656, length 100
+11:40:37.580897 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 100:192, ack 1, win 9656, length 92
+11:40:37.582421 ARP, Request who-has 128.105.147.74 (Broadcast) tell 128.105.144.3, length 46
+11:40:37.587556 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 4294967196:0, ack 1, win 9656, length 100
+11:40:37.589935 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 192:284, ack 133, win 9656, length 92
+11:40:37.595729 ARP, Request who-has c240g5-110113.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:37.599171 ARP, Request who-has 128.104.222.247 (Broadcast) tell 128.104.222.3, length 46
+11:40:37.611284 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 4294967196, win 16383, options [nop,nop,sack 1 {0:100}], length 0
+11:40:37.614169 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 4294967196, win 16383, options [nop,nop,sack 1 {0:192}], length 0
+11:40:37.614293 ARP, Request who-has 128.105.146.17 (Broadcast) tell 128.105.144.3, length 46
+11:40:37.620852 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 192, win 16382, length 0
+11:40:37.631464 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 133:225, ack 284, win 16381, length 92
+11:40:37.635755 ARP, Request who-has 128.105.146.246 (Broadcast) tell 128.105.144.3, length 46
+11:40:37.637622 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 284:384, ack 133, win 9656, length 100
+11:40:37.652454 ARP, Request who-has 128.105.147.185 (Broadcast) tell 128.105.144.3, length 46
+11:40:37.659136 ARP, Request who-has 128.104.222.255 (Broadcast) tell 128.104.222.3, length 46
+11:40:37.659215 ARP, Request who-has c220g1-030621.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:37.661106 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 384:476, ack 133, win 9656, length 92
+11:40:37.672444 ARP, Request who-has 128.104.223.110 (Broadcast) tell 128.104.222.3, length 46
+11:40:37.675309 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 225:333, ack 384, win 16381, length 108
+11:40:37.679384 ARP, Request who-has 128.104.222.5 (Broadcast) tell 128.104.222.3, length 46
+11:40:37.682610 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 333:425, ack 384, win 16381, length 92
+11:40:37.716021 ARP, Request who-has 128.104.223.159 (Broadcast) tell 128.104.222.3, length 46
+11:40:37.728370 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 476:568, ack 133, win 9656, length 92
+11:40:37.730731 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 568:676, ack 225, win 9656, length 108
+11:40:37.739012 ARP, Request who-has 128.104.222.92 (Broadcast) tell 128.104.222.3, length 46
+11:40:37.742164 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 476, win 16381, length 0
+11:40:37.751445 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 425:517, ack 476, win 16381, length 92
+11:40:37.762406 ARP, Request who-has 128.104.223.134 (Broadcast) tell 128.104.222.3, length 46
+11:40:37.763789 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 676, win 16380, length 0
+11:40:37.776484 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 768:892, ack 425, win 9656, length 124
+11:40:37.778285 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 676:768, ack 333, win 9656, length 92
+11:40:37.785673 ARP, Request who-has pool-ctl-128-105-146-199.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:37.795669 ARP, Request who-has 128.104.222.34 (Broadcast) tell 128.104.222.3, length 46
+11:40:37.808998 ARP, Request who-has 128.104.223.87 (Broadcast) tell 128.104.222.3, length 46
+11:40:37.809761 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 676, win 16380, options [nop,nop,sack 1 {768:892}], length 0
+11:40:37.811568 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 892, win 16379, length 0
+11:40:37.813123 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 517:609, ack 892, win 16379, length 92
+11:40:37.817569 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 892:992, ack 425, win 9656, length 100
+11:40:37.818291 ARP, Request who-has 10.134.8.1 tell 10.134.9.188, length 46
+11:40:37.839377 ARP, Request who-has 128.105.147.27 (Broadcast) tell 128.105.144.3, length 46
+11:40:37.845768 ARP, Request who-has 128.104.222.153 (Broadcast) tell 128.104.222.3, length 46
+11:40:37.852343 ARP, Request who-has 128.105.147.238 (Broadcast) tell 128.105.144.3, length 46
+11:40:37.853678 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 992:1092, ack 517, win 9656, length 100
+11:40:37.862339 ARP, Request who-has 128.104.222.113 (Broadcast) tell 128.104.222.3, length 46
+11:40:37.878997 ARP, Request who-has dyn-128-105-146-114.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:37.883558 ARP, Request who-has dyn-128-105-146-104.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:37.889008 ARP, Request who-has 128.105.147.114 (Broadcast) tell 128.105.144.3, length 46
+11:40:37.889729 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 1092, win 16383, length 0
+11:40:37.890894 ARP, Request who-has 128.104.223.203 (Broadcast) tell 128.104.222.3, length 46
+11:40:37.895768 ARP, Request who-has 128.104.222.105 (Broadcast) tell 128.104.222.3, length 46
+11:40:37.898697 IP paul.staffarticles.org.uk.51459 > c220g5-111230.wisc.cloudlab.us.13354: Flags [S], seq 3287406337, win 1024, length 0
+11:40:37.898753 IP c220g5-111230.wisc.cloudlab.us.13354 > paul.staffarticles.org.uk.51459: Flags [R.], seq 0, ack 3287406338, win 0, length 0
+11:40:37.901903 ARP, Request who-has 128.104.223.133 (Broadcast) tell 128.104.222.3, length 46
+11:40:37.909009 ARP, Request who-has 128.105.146.252 (Broadcast) tell 128.105.144.3, length 46
+11:40:37.919004 ARP, Request who-has 128.104.223.161 (Broadcast) tell 128.104.222.3, length 46
+11:40:37.921283 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 1092:1192, ack 609, win 9656, length 100
+11:40:37.929173 ARP, Request who-has 128.105.147.4 (Broadcast) tell 128.105.144.3, length 46
+11:40:37.933922 STP 802.1w, Rapid STP, Flags [Learn, Forward], bridge-id 80d7.cc:ed:4d:c2:17:a7.8075, length 42
+11:40:37.939858 ARP, Request who-has 128.104.222.14 (Broadcast) tell 128.104.222.3, length 46
+11:40:37.968465 ARP, Request who-has 128.104.223.57 (Broadcast) tell 128.104.222.3, length 46
+11:40:37.973760 ARP, Request who-has 128.105.147.29 (Broadcast) tell 128.105.144.3, length 46
+11:40:37.992326 ARP, Request who-has 128.104.223.153 (Broadcast) tell 128.104.222.3, length 46
+11:40:37.992435 ARP, Request who-has 128.104.222.230 (Broadcast) tell 128.104.222.3, length 46
+11:40:37.999053 ARP, Request who-has 128.105.147.12 (Broadcast) tell 128.105.144.3, length 46
+11:40:37.999093 ARP, Request who-has dyn-128-105-146-121.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:38.000242 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 1192, win 16383, length 0
+11:40:38.009148 ARP, Request who-has 128.105.147.230 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.011282 IP paul.staffarticles.org.uk.51459 > c220g5-111230.wisc.cloudlab.us.13354: Flags [R], seq 3287406338, win 1200, length 0
+11:40:38.025991 IP6 fe80::3eec:efff:feef:3254.dhcpv6-client > ff02::1:2.dhcpv6-server: dhcp6 inf-req
+11:40:38.032347 ARP, Request who-has 128.105.147.73 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.047496 ARP, Request who-has 128.105.146.227 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.062339 ARP, Request who-has 128.105.147.159 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.062425 ARP, Request who-has c220g1-030616.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:38.082349 ARP, Request who-has 128.104.223.254 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.082458 ARP, Request who-has 128.105.146.26 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.089036 ARP, Request who-has 128.105.147.174 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.089177 ARP, Request who-has 128.104.223.154 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.096183 ARP, Request who-has 128.105.147.215 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.123860 ARP, Request who-has 128.104.222.52 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.123978 ARP, Request who-has 128.105.147.52 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.124414 ARP, Request who-has 128.105.147.242 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.129006 ARP, Request who-has 128.105.146.70 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.129121 ARP, Request who-has 128.104.222.109 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.139024 ARP, Request who-has 128.105.146.206 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.140075 ARP, Request who-has 128.104.222.148 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.149010 ARP, Request who-has 128.105.147.2 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.149072 ARP, Request who-has 128.105.147.53 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.169115 ARP, Request who-has 128.104.223.16 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.175665 ARP, Request who-has 128.105.147.102 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.179012 ARP, Request who-has 128.105.147.17 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.185272 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 609:701, ack 1192, win 16383, length 92
+11:40:38.192358 ARP, Request who-has 128.104.223.167 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.193276 ARP, Request who-has dyn-128-105-146-145.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:38.199059 ARP, Request who-has 128.105.146.69 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.245655 ARP, Request who-has 10.134.10.9 tell 10.134.8.9, length 46
+11:40:38.255919 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 701:809, ack 1192, win 16383, length 108
+11:40:38.268723 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 809:909, ack 1192, win 16383, length 100
+11:40:38.274912 ARP, Request who-has 128.104.222.212 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.274958 ARP, Request who-has 128.104.222.229 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.282164 ARP, Request who-has 128.105.147.79 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.283741 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 1192:1284, ack 701, win 9656, length 92
+11:40:38.290038 ARP, Request who-has 128.104.223.53 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.290769 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 909:1001, ack 1192, win 16383, length 92
+11:40:38.295667 ARP, Request who-has 128.104.222.199 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.295755 ARP, Request who-has 128.105.147.105 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.302390 ARP, Request who-has 128.104.222.162 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.304322 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 1001:1093, ack 1192, win 16383, length 92
+11:40:38.315681 ARP, Request who-has 128.105.146.204 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.315737 ARP, Request who-has 128.105.147.201 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.320604 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 1093:1185, ack 1284, win 16383, length 92
+11:40:38.329083 ARP, Request who-has 128.105.144.9 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.335683 ARP, Request who-has 128.104.222.251 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.338210 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 1185:1277, ack 1284, win 16383, length 92
+11:40:38.342338 ARP, Request who-has dyn-128-105-146-178.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:38.354538 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 1284:1504, ack 809, win 9656, length 220
+11:40:38.355624 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 1277:1369, ack 1284, win 16383, length 92
+11:40:38.369516 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 1504:1628, ack 909, win 9656, length 124
+11:40:38.370530 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 1369:1461, ack 1284, win 16383, length 92
+11:40:38.387925 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 1461:1553, ack 1504, win 16382, length 92
+11:40:38.388755 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 1553:1645, ack 1504, win 16382, length 92
+11:40:38.390043 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 1628:1744, ack 1001, win 9656, length 116
+11:40:38.392443 ARP, Request who-has 128.104.223.132 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.402473 ARP, Request who-has 128.104.222.107 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.404598 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 1645:1737, ack 1628, win 16381, length 92
+11:40:38.404912 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 1737:1837, ack 1628, win 16381, length 100
+11:40:38.412427 ARP, Request who-has 128.104.222.169 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.418566 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 1852:1960, ack 1185, win 9656, length 108
+11:40:38.419004 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 1744:1852, ack 1093, win 9656, length 108
+11:40:38.420687 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 1837:1929, ack 1628, win 16381, length 92
+11:40:38.424289 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 1929:2021, ack 1744, win 16381, length 92
+11:40:38.424418 ARP, Request who-has 128.105.147.44 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.425132 ARP, Request who-has dyn-128-105-146-101.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:38.425654 ARP, Request who-has 128.104.222.220 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.433416 STP 802.1w, Rapid STP, Flags [Learn, Forward], bridge-id 80d3.cc:ed:4d:c2:17:a7.8075, length 42
+11:40:38.437140 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 2021:2113, ack 1744, win 16381, length 92
+11:40:38.441437 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 1960:2068, ack 1277, win 9656, length 108
+11:40:38.445727 ARP, Request who-has 128.105.147.178 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.449297 ARP, Request who-has 128.104.222.65 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.451684 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 1744, win 16381, options [nop,nop,sack 1 {1852:1960}], length 0
+11:40:38.451684 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 1960, win 16380, length 0
+11:40:38.452219 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 2068:2176, ack 1369, win 9656, length 108
+11:40:38.452343 ARP, Request who-has dyn-128-105-146-193.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:38.454026 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 2113:2205, ack 1960, win 16380, length 92
+11:40:38.454417 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 2205:2313, ack 1960, win 16380, length 108
+11:40:38.459058 ARP, Request who-has 128.104.223.35 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.459110 ARP, Request who-has 128.105.147.50 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.464535 IP 10.130.6.2.1985 > 224.0.0.102.1985: HSRPv1
+11:40:38.470553 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 2313:2405, ack 1960, win 16380, length 92
+11:40:38.472336 ARP, Request who-has 128.105.147.181 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.472400 ARP, Request who-has c220g2-031131.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:38.475403 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 2176:2284, ack 1461, win 9656, length 108
+11:40:38.475890 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 2405:2497, ack 2068, win 16379, length 92
+11:40:38.477755 ARP, Request who-has 128.104.223.92 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.479028 ARP, Request who-has dyn-128-105-146-162.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:38.485808 ARP, Request who-has 128.104.222.176 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.486996 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [.], ack 1645, win 9656, length 0
+11:40:38.487559 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 2497:2589, ack 2176, win 16379, length 92
+11:40:38.487560 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 2589:2681, ack 2176, win 16379, length 92
+11:40:38.489752 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 2284:2416, ack 1645, win 9656, length 132
+11:40:38.492442 ARP, Request who-has 128.104.223.66 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.499755 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [.], ack 1837, win 9656, length 0
+11:40:38.502347 ARP, Request who-has 128.104.223.222 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.502541 ARP, Request who-has 128.105.147.222 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.508948 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 2416:2532, ack 1837, win 9656, length 116
+11:40:38.510722 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 2681:2773, ack 2284, win 16379, length 92
+11:40:38.514591 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 2532:2648, ack 1929, win 9656, length 116
+11:40:38.516164 ARP, Request who-has 128.104.223.51 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.522445 ARP, Request who-has 128.105.147.32 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.522881 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 2416, win 16383, length 0
+11:40:38.524090 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 2773:2881, ack 2416, win 16383, length 108
+11:40:38.525207 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 2648:2844, ack 2021, win 9656, length 196
+11:40:38.533219 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 2844:2952, ack 2113, win 9656, length 108
+11:40:38.543691 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 2881:2973, ack 2532, win 16383, length 92
+11:40:38.548633 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 2973:3113, ack 2648, win 16382, length 140
+11:40:38.553812 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 3084:3240, ack 2313, win 9656, length 156
+11:40:38.556297 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 2952:3084, ack 2205, win 9656, length 132
+11:40:38.559150 ARP, Request who-has 128.104.223.61 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.559602 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 3113:3205, ack 2844, win 16382, length 92
+11:40:38.567682 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 3205:3297, ack 2952, win 16381, length 92
+11:40:38.568835 ARP, Request who-has 128.104.223.241 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.571385 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 3240:3348, ack 2405, win 9656, length 108
+11:40:38.575829 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 3348:3456, ack 2497, win 9656, length 108
+11:40:38.581204 ARP, Request who-has 128.104.223.240 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.587034 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 2952, win 16381, options [nop,nop,sack 1 {3084:3240}], length 0
+11:40:38.587798 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [.], ack 2681, win 9656, length 0
+11:40:38.589488 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 3240, win 16380, length 0
+11:40:38.590952 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 3297:3421, ack 3240, win 16380, length 124
+11:40:38.593375 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 3456:3580, ack 2681, win 9656, length 124
+11:40:38.602425 ARP, Request who-has 128.105.146.238 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.604211 ARP, Request who-has 128.105.146.68 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.605909 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 3421:3513, ack 3348, win 16380, length 92
+11:40:38.609809 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 3513:3605, ack 3456, win 16379, length 92
+11:40:38.609843 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 3580:3688, ack 2773, win 9656, length 108
+11:40:38.627764 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 3605:3705, ack 3580, win 16379, length 100
+11:40:38.628760 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 3688:3828, ack 2881, win 9656, length 140
+11:40:38.629181 ARP, Request who-has 128.104.223.140 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.642481 ARP, Request who-has 128.105.147.26 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.643114 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 3688, win 16383, length 0
+11:40:38.644502 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 3705:3797, ack 3688, win 16383, length 92
+11:40:38.648202 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 3828:3944, ack 2973, win 9656, length 116
+11:40:38.652513 ARP, Request who-has 128.104.222.108 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.655352 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 3944:4084, ack 3113, win 9656, length 140
+11:40:38.660671 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 4084:4192, ack 3205, win 9656, length 108
+11:40:38.663868 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 3797:3905, ack 3828, win 16383, length 108
+11:40:38.666109 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 4192:4300, ack 3297, win 9656, length 108
+11:40:38.667417 ARP, Request who-has 128.104.223.59 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.667462 ARP, Request who-has 128.105.147.75 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.672739 ARP, Request who-has 128.105.147.229 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.683204 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 3905:3997, ack 3944, win 16382, length 92
+11:40:38.688638 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 4300:4472, ack 3421, win 9656, length 172
+11:40:38.690161 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 3997:4105, ack 4084, win 16382, length 108
+11:40:38.692383 ARP, Request who-has 128.104.223.227 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.695011 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 4105:4197, ack 4192, win 16381, length 92
+11:40:38.700162 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 4197:4289, ack 4300, win 16381, length 92
+11:40:38.704648 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 4472:4572, ack 3513, win 9656, length 100
+11:40:38.705672 ARP, Request who-has 128.104.222.61 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.706803 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 4572:4680, ack 3605, win 9656, length 108
+11:40:38.712363 ARP, Request who-has 128.104.223.137 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.712566 ARP, Request who-has 128.105.147.3 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.719031 ARP, Request who-has 128.105.147.5 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.721655 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 4680:4788, ack 3705, win 9656, length 108
+11:40:38.723699 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 4289:4405, ack 4472, win 16380, length 116
+11:40:38.725669 ARP, Request who-has 128.105.147.192 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.735658 ARP, Request who-has 128.104.222.68 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.735765 ARP, Request who-has 128.104.223.79 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.735806 ARP, Request who-has 128.104.222.86 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.739765 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 4405:4497, ack 4572, win 16380, length 92
+11:40:38.740782 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 4497:4589, ack 4680, win 16379, length 92
+11:40:38.742390 ARP, Request who-has 128.105.146.207 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.748452 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 4788:4912, ack 3797, win 9656, length 124
+11:40:38.756563 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 4589:4681, ack 4788, win 16379, length 92
+11:40:38.756882 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 4681:4773, ack 4788, win 16379, length 92
+11:40:38.767778 ARP, Request who-has 128.104.223.77 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.769843 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 4912:5020, ack 3905, win 9656, length 108
+11:40:38.770183 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 4773:4865, ack 4788, win 16379, length 92
+11:40:38.782750 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 4865:4965, ack 4912, win 16378, length 100
+11:40:38.786980 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 5020:5160, ack 3997, win 9656, length 140
+11:40:38.790955 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 5160:5276, ack 4105, win 9656, length 116
+11:40:38.799682 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 5464:5572, ack 4289, win 9656, length 108
+11:40:38.799834 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 5276:5464, ack 4197, win 9656, length 188
+11:40:38.803041 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 5020, win 16383, length 0
+11:40:38.804883 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 4965:5057, ack 5020, win 16383, length 92
+11:40:38.816450 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 5572:5680, ack 4405, win 9656, length 108
+11:40:38.821410 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 5057:5165, ack 5160, win 16383, length 108
+11:40:38.825791 ARP, Request who-has 128.105.147.231 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.825878 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 5165:5257, ack 5276, win 16382, length 92
+11:40:38.832772 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 5276, win 16382, options [nop,nop,sack 1 {5464:5572}], length 0
+11:40:38.832772 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 5572, win 16381, length 0
+11:40:38.834368 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 5257:5365, ack 5572, win 16381, length 108
+11:40:38.834622 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 5365:5457, ack 5572, win 16381, length 92
+11:40:38.839058 ARP, Request who-has 128.105.147.221 (Broadcast) tell 128.105.144.3, length 46
+11:40:38.839215 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 5680:5860, ack 4497, win 9656, length 180
+11:40:38.842346 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 5860:5960, ack 4589, win 9656, length 100
+11:40:38.843861 IP 10.130.6.3.1985 > 224.0.0.102.1985: HSRPv1
+11:40:38.852003 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 5457:5549, ack 5680, win 16381, length 92
+11:40:38.861408 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 6068:6176, ack 4773, win 9656, length 108
+11:40:38.864800 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 5960:6068, ack 4681, win 9656, length 108
+11:40:38.868355 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 6176:6284, ack 4865, win 9656, length 108
+11:40:38.873889 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 5549:5681, ack 5860, win 16380, length 132
+11:40:38.876983 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 6284:6392, ack 4965, win 9656, length 108
+11:40:38.882761 ARP, Request who-has 128.104.222.75 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.894370 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 5960, win 16380, options [nop,nop,sack 1 {6068:6176}], length 0
+11:40:38.897888 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 6176, win 16379, length 0
+11:40:38.899462 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 5681:5773, ack 6176, win 16379, length 92
+11:40:38.899806 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 5773:5865, ack 6176, win 16379, length 92
+11:40:38.899827 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 6392:6516, ack 5057, win 9656, length 124
+11:40:38.901378 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 6284, win 16383, length 0
+11:40:38.902801 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 5865:5957, ack 6284, win 16383, length 92
+11:40:38.911091 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 5957:6049, ack 6392, win 16383, length 92
+11:40:38.921368 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 6516:6624, ack 5165, win 9656, length 108
+11:40:38.926773 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 6756:6864, ack 5365, win 9656, length 108
+11:40:38.929995 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 6864:7012, ack 5457, win 9656, length 148
+11:40:38.934929 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 6049:6157, ack 6516, win 16382, length 108
+11:40:38.934994 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 6624:6756, ack 5257, win 9656, length 132
+11:40:38.951531 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 7012:7120, ack 5549, win 9656, length 108
+11:40:38.956127 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 6157:6249, ack 6624, win 16382, length 92
+11:40:38.959870 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 6624, win 16382, options [nop,nop,sack 1 {6756:6864}], length 0
+11:40:38.962950 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 6624, win 16382, options [nop,nop,sack 1 {6756:7012}], length 0
+11:40:38.967969 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 7012, win 16380, length 0
+11:40:38.969071 ARP, Request who-has 128.104.223.238 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.969841 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 6249:6421, ack 7012, win 16380, length 172
+11:40:38.970210 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 6421:6553, ack 7012, win 16380, length 132
+11:40:38.980821 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 7120:7412, ack 5681, win 9656, length 292
+11:40:38.986404 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 6553:6645, ack 7120, win 16380, length 92
+11:40:38.989036 ARP, Request who-has dyn-128-105-146-172.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:38.989083 ARP, Request who-has 128.104.222.129 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.991829 ARP, Request who-has 128.104.222.96 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.999047 ARP, Request who-has 128.104.222.91 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.999208 ARP, Request who-has dyn-128-105-146-128.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:38.999252 ARP, Request who-has 128.104.222.47 (Broadcast) tell 128.104.222.3, length 46
+11:40:38.999292 ARP, Request who-has dyn-128-105-146-122.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:39.000990 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [.], ack 5865, win 9656, length 0
+11:40:39.002663 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 7412:7544, ack 5865, win 9656, length 132
+11:40:39.004442 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 7544:7652, ack 5957, win 9656, length 108
+11:40:39.005667 ARP, Request who-has 128.105.147.113 (Broadcast) tell 128.105.144.3, length 46
+11:40:39.005696 ARP, Request who-has 128.104.223.229 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.009749 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 7652:7760, ack 6049, win 9656, length 108
+11:40:39.019057 ARP, Request who-has 128.105.147.155 (Broadcast) tell 128.105.144.3, length 46
+11:40:39.025763 ARP, Request who-has 128.104.222.39 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.035780 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 7544, win 16383, length 0
+11:40:39.035823 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 7760:7884, ack 6157, win 9656, length 124
+11:40:39.042769 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 7760, win 16382, length 0
+11:40:39.045707 ARP, Request who-has 128.104.223.231 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.045765 ARP, Request who-has 128.105.147.191 (Broadcast) tell 128.105.144.3, length 46
+11:40:39.057573 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 7884:7992, ack 6249, win 9656, length 108
+11:40:39.065762 ARP, Request who-has 128.104.223.139 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.068855 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 7992:8276, ack 6553, win 9656, length 284
+11:40:39.075887 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [.], ack 6553, win 9656, length 0
+11:40:39.081685 ARP, Request who-has 128.104.222.93 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.083516 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 8276:8400, ack 6645, win 9656, length 124
+11:40:39.085732 ARP, Request who-has 128.105.147.23 (Broadcast) tell 128.105.144.3, length 46
+11:40:39.089878 ARP, Request who-has 128.104.223.9 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.090664 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 7992, win 16382, length 0
+11:40:39.092348 ARP, Request who-has dyn-128-105-146-159.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:39.092416 ARP, Request who-has 128.104.222.158 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.099094 ARP, Request who-has 128.104.223.96 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.104702 ARP, Request who-has 128.104.222.216 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.105726 ARP, Request who-has 128.104.222.30 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.105912 ARP, Request who-has 128.105.146.212 (Broadcast) tell 128.105.144.3, length 46
+11:40:39.109041 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 8276, win 16380, length 0
+11:40:39.116640 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 8400, win 16380, length 0
+11:40:39.129232 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 8400:8508, ack 6645, win 9656, length 108
+11:40:39.132344 ARP, Request who-has 128.104.222.56 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.138998 ARP, Request who-has 128.104.223.199 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.149072 ARP, Request who-has 128.104.222.57 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.157695 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 8508:8600, ack 6645, win 9656, length 92
+11:40:39.158464 ARP, Request who-has 128.105.146.250 (Broadcast) tell 128.105.144.3, length 46
+11:40:39.162702 ARP, Request who-has 128.104.222.130 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.169004 ARP, Request who-has 128.104.223.216 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.169097 ARP, Request who-has 128.104.222.170 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.182484 ARP, Request who-has 128.105.146.229 (Broadcast) tell 128.105.144.3, length 46
+11:40:39.188993 ARP, Request who-has 128.105.147.62 (Broadcast) tell 128.105.144.3, length 46
+11:40:39.191408 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 8600, win 16379, length 0
+11:40:39.219074 ARP, Request who-has 128.105.147.101 (Broadcast) tell 128.105.144.3, length 46
+11:40:39.227681 ARP, Request who-has 128.104.222.142 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.237211 ARP, Request who-has 128.104.223.230 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.245949 ARP, Request who-has 128.104.222.146 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.285718 ARP, Request who-has 128.104.223.84 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.300889 ARP, Request who-has 128.104.222.114 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.312337 ARP, Request who-has 128.104.222.110 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.335725 ARP, Request who-has 128.104.222.205 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.345195 ARP, Request who-has 128.105.147.129 (Broadcast) tell 128.105.144.3, length 46
+11:40:39.354535 IP6 fe80::eab2:65ff:fe42:30b4 > ff02::1:ffee:bfa4: ICMP6, neighbor solicitation, who has fe80::3eec:efff:feee:bfa4, length 32
+11:40:39.355674 ARP, Request who-has 128.104.222.6 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.375492 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 6645:6737, ack 8600, win 16379, length 92
+11:40:39.385729 ARP, Request who-has 128.104.223.202 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.422349 ARP, Request who-has 128.104.222.120 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.431180 ARP, Request who-has 128.104.222.117 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.433579 STP 802.1w, Rapid STP, Flags [Learn, Forward], bridge-id 80d3.cc:ed:4d:c2:17:a7.8075, length 42
+11:40:39.468996 ARP, Request who-has 128.104.222.177 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.471047 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 8600:8700, ack 6737, win 9656, length 100
+11:40:39.479003 ARP, Request who-has c220g2-011303.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:39.495703 ARP, Request who-has 128.104.222.141 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.502395 ARP, Request who-has 128.105.146.247 (Broadcast) tell 128.105.144.3, length 46
+11:40:39.525719 ARP, Request who-has 128.105.147.126 (Broadcast) tell 128.105.144.3, length 46
+11:40:39.530697 ARP, Request who-has 128.104.223.43 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.538991 ARP, Request who-has 128.104.223.184 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.552448 ARP, Request who-has 128.105.147.161 (Broadcast) tell 128.105.144.3, length 46
+11:40:39.558961 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 8700, win 16379, length 0
+11:40:39.562350 ARP, Request who-has 128.105.147.172 (Broadcast) tell 128.105.144.3, length 46
+11:40:39.582545 ARP, Request who-has 128.105.147.58 (Broadcast) tell 128.105.144.3, length 46
+11:40:39.582744 ARP, Request who-has 128.105.147.117 (Broadcast) tell 128.105.144.3, length 46
+11:40:39.602361 ARP, Request who-has c240g5-110113.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:39.613304 ARP, Request who-has dyn-128-105-146-131.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:39.613543 ARP, Request who-has 128.104.222.181 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.619177 ARP, Request who-has 128.105.146.17 (Broadcast) tell 128.105.144.3, length 46
+11:40:39.629003 ARP, Request who-has 128.104.223.117 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.635790 ARP, Request who-has 128.104.223.180 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.685559 ARP, Request who-has 128.104.223.215 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.695493 ARP, Request who-has 128.105.146.240 (Broadcast) tell 128.105.144.3, length 46
+11:40:39.695664 ARP, Request who-has 128.105.147.16 (Broadcast) tell 128.105.144.3, length 46
+11:40:39.703603 ARP, Request who-has 128.105.147.139 (Broadcast) tell 128.105.144.3, length 46
+11:40:39.719018 ARP, Request who-has aggsw-c3172-120235.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:39.728732 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 8700:8984, ack 6737, win 9656, length 284
+11:40:39.749002 ARP, Request who-has 128.104.223.18 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.764019 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 6737:6829, ack 8984, win 16383, length 92
+11:40:39.835794 ARP, Request who-has 128.105.146.216 (Broadcast) tell 128.105.144.3, length 46
+11:40:39.836794 ARP, Request who-has 128.104.222.121 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.842418 ARP, Request who-has 128.104.222.144 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.864992 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 8984:9084, ack 6829, win 9656, length 100
+11:40:39.885887 ARP, Request who-has 128.104.222.84 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.885941 ARP, Request who-has 128.104.223.102 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.885982 ARP, Request who-has dyn-128-105-146-104.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:39.895734 ARP, Request who-has 128.104.223.203 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.895747 ARP, Request who-has 10.130.6.9 (Broadcast) tell 10.130.6.2, length 46
+11:40:39.902432 ARP, Request who-has 128.104.223.133 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.909107 ARP, Request who-has 128.105.146.241 (Broadcast) tell 128.105.144.3, length 46
+11:40:39.924370 IP 10.134.8.232.34459 > boss.wisc.cloudlab.us.domain: 19917+ [1au] AAAA? svc.intersight.com.wisc.cloudlab.us. (64)
+11:40:39.924427 ARP, Request who-has dyn-128-105-146-119.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:39.925426 IP 10.134.8.232.34162 > boss.wisc.cloudlab.us.domain: 16818+ [1au] A? svc.intersight.com.wisc.cloudlab.us. (64)
+11:40:39.925660 ARP, Request who-has 128.104.223.100 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.933926 STP 802.1w, Rapid STP, Flags [Learn, Forward], bridge-id 80d7.cc:ed:4d:c2:17:a7.8075, length 42
+11:40:39.940002 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 9084, win 16383, length 0
+11:40:39.945692 ARP, Request who-has 128.104.222.14 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.952390 ARP, Request who-has 128.104.222.231 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.970719 IP 128.104.222.2.1985 > 224.0.0.102.1985: HSRPv1
+11:40:39.972340 ARP, Request who-has 128.104.223.57 (Broadcast) tell 128.104.222.3, length 46
+11:40:39.975384 IP nat-128-62-79-89.public.utexas.edu.5274 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 1038906200:1038906244, ack 229297082, win 21476, options [nop,nop,TS val 2449878978 ecr 2706375220], length 44
+11:40:39.975752 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.5274: Flags [P.], seq 1:69, ack 44, win 501, options [nop,nop,TS val 2706394280 ecr 2449878978], length 68
+11:40:39.978999 ARP, Request who-has 128.105.147.29 (Broadcast) tell 128.105.144.3, length 46
+11:40:39.979084 ARP, Request who-has dyn-128-105-146-130.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:39.979126 ARP, Request who-has 128.105.147.57 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.000273 ARP, Request who-has 128.104.222.223 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.009939 IP nat-128-62-79-89.public.utexas.edu.5274 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 69, win 21476, options [nop,nop,TS val 2449879013 ecr 2706394280], length 0
+11:40:40.012336 IP 128.104.222.3.1985 > 224.0.0.102.1985: HSRPv1
+11:40:40.025747 ARP, Request who-has 128.104.223.45 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.038997 ARP, Request who-has 128.105.147.35 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.052336 ARP, Request who-has 128.105.146.227 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.059065 ARP, Request who-has 128.105.147.103 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.072501 IP 128.104.222.3 > pim-routers.mcast.net: PIMv2, Hello, length 42
+11:40:40.099053 ARP, Request who-has 128.105.147.215 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.099194 ARP, Request who-has 128.105.147.175 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.105683 ARP, Request who-has 128.104.222.243 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.129019 ARP, Request who-has 128.105.147.242 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.145686 ARP, Request who-has 128.104.222.148 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.182435 ARP, Request who-has 128.104.223.70 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.182523 ARP, Request who-has 128.105.147.17 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.195102 ARP, Request who-has 128.105.147.196 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.195731 ARP, Request who-has dyn-128-105-146-145.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:40.202241 IP nat-128-62-79-89.public.utexas.edu.5274 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 44:80, ack 69, win 21476, options [nop,nop,TS val 2449879205 ecr 2706394280], length 36
+11:40:40.202433 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.5274: Flags [P.], seq 69:121, ack 80, win 501, options [nop,nop,TS val 2706394506 ecr 2449879205], length 52
+11:40:40.219524 ARP, Request who-has 128.104.223.71 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.223846 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.5274: Flags [P.], seq 121:165, ack 80, win 501, options [nop,nop,TS val 2706394528 ecr 2449879205], length 44
+11:40:40.223915 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.5274: Flags [P.], seq 165:353, ack 80, win 501, options [nop,nop,TS val 2706394528 ecr 2449879205], length 188
+11:40:40.236049 IP nat-128-62-79-89.public.utexas.edu.5274 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 121, win 21476, options [nop,nop,TS val 2449879239 ecr 2706394506], length 0
+11:40:40.257409 IP nat-128-62-79-89.public.utexas.edu.5274 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 165, win 21476, options [nop,nop,TS val 2449879260 ecr 2706394528], length 0
+11:40:40.257409 IP nat-128-62-79-89.public.utexas.edu.5274 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 353, win 21476, options [nop,nop,TS val 2449879260 ecr 2706394528], length 0
+11:40:40.269096 ARP, Request who-has 128.104.222.7 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.277859 ARP, Request who-has 128.105.147.24 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.277880 ARP, Request who-has 128.104.222.229 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.278262 ARP, Request who-has 128.105.147.15 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.282449 ARP, Request who-has 128.104.222.12 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.282476 ARP, Request who-has 128.105.147.79 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.289023 ARP, Request who-has 128.104.223.97 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.295674 ARP, Request who-has 128.104.223.53 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.296757 ARP, Request who-has 128.105.147.152 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.307225 ARP, Request who-has 128.104.222.173 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.319056 ARP, Request who-has 128.104.222.45 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.333575 ARP, Request who-has 128.104.222.233 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.345763 ARP, Request who-has 128.105.147.235 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.353598 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 9084:9232, ack 6829, win 9656, length 148
+11:40:40.365800 ARP, Request who-has 128.104.223.196 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.365838 ARP, Request who-has 128.105.147.20 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.373299 ARP, Request who-has 128.104.222.127 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.391197 ARP, Request who-has dyn-128-105-146-112.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:40.394576 ARP, Request who-has 128.104.222.58 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.409024 ARP, Request who-has 128.104.223.56 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.409068 ARP, Request who-has 128.104.222.79 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.425795 ARP, Request who-has 128.105.147.44 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.425853 ARP, Request who-has dyn-128-105-146-101.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:40.427327 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 9232, win 16382, length 0
+11:40:40.434068 STP 802.1w, Rapid STP, Flags [Learn, Forward], bridge-id 80d3.cc:ed:4d:c2:17:a7.8075, length 42
+11:40:40.439226 ARP, Request who-has dyn-128-105-146-124.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:40.452429 ARP, Request who-has 128.104.222.65 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.472580 ARP, Request who-has 128.104.222.41 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.476070 ARP, Request who-has 10.134.9.173 tell 10.134.8.9, length 46
+11:40:40.479177 ARP, Request who-has 128.104.223.104 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.479212 ARP, Request who-has 128.104.223.92 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.480132 ARP, Request who-has 128.105.147.121 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.485712 ARP, Request who-has 128.105.147.55 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.485760 ARP, Request who-has 128.105.147.60 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.494073 ARP, Request who-has 128.105.147.225 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.502646 ARP, Request who-has 128.105.147.148 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.508928 ARP, Request who-has 128.104.223.189 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.529017 ARP, Request who-has 128.104.222.239 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.555704 ARP, Request who-has 128.105.146.209 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.569110 ARP, Request who-has 128.104.223.241 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.569176 ARP, Request who-has 128.105.146.236 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.579061 ARP, Request who-has 128.105.147.108 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.585677 ARP, Request who-has 128.104.223.240 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.606435 ARP, Request who-has 128.105.147.251 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.609141 ARP, Request who-has 128.105.146.68 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.622488 ARP, Request who-has 128.104.223.128 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.634737 ARP, Request who-has 128.105.147.240 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.635716 ARP, Request who-has 128.105.147.250 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.642341 ARP, Request who-has dyn-128-105-146-156.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:40.646799 ARP, Request who-has 128.105.146.245 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.663013 ARP, Request who-has 128.105.144.5 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.679020 ARP, Request who-has 128.105.147.229 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.681015 ARP, Request who-has 128.105.147.38 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.692628 ARP, Request who-has 128.104.222.179 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.699016 ARP, Request who-has c220g5-110907.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:40.703647 ARP, Request who-has 128.104.222.70 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.712597 ARP, Request who-has 128.104.223.37 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.732493 ARP, Request who-has 128.105.147.127 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.740485 ARP, Request who-has dyn-128-105-146-135.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:40.755723 ARP, Request who-has 128.105.147.104 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.760267 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 9232:9324, ack 6829, win 9656, length 92
+11:40:40.762343 ARP, Request who-has 128.105.147.180 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.772367 ARP, Request who-has 128.104.223.77 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.795122 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 6829:6921, ack 9324, win 16382, length 92
+11:40:40.815183 ARP, Request who-has 128.104.222.166 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.828995 ARP, Request who-has 128.104.223.13 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.839050 ARP, Request who-has 128.105.147.77 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.854424 ARP, Request who-has 128.105.147.162 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.872420 ARP, Request who-has 128.105.147.232 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.878998 ARP, Request who-has 128.105.147.86 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.888733 ARP, Request who-has 128.104.223.250 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.889002 ARP, Request who-has 128.104.222.75 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.889207 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 9324:9424, ack 6921, win 9656, length 100
+11:40:40.904668 ARP, Request who-has 128.104.222.122 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.905668 ARP, Request who-has 128.104.223.12 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.907784 ARP, Request who-has dyn-128-105-146-187.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:40.910592 ARP, Request who-has 128.104.223.52 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.929339 ARP, Request who-has 128.104.223.76 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.929446 ARP, Request who-has pool-ctl-128-105-146-198.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:40.952437 ARP, Request who-has 128.105.146.220 (Broadcast) tell 128.105.144.3, length 46
+11:40:40.959039 ARP, Request who-has 128.104.222.66 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.974133 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 9424, win 16382, length 0
+11:40:40.979102 ARP, Request who-has 128.104.222.232 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.985665 ARP, Request who-has 128.104.222.225 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.985711 ARP, Request who-has 128.104.223.187 (Broadcast) tell 128.104.222.3, length 46
+11:40:40.995714 ARP, Request who-has 128.104.222.96 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.002395 ARP, Request who-has 128.104.223.170 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.015688 ARP, Request who-has 128.104.222.184 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.015818 ARP, Request who-has 128.104.223.80 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.021604 ARP, Request who-has 128.104.222.63 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.039003 ARP, Request who-has 128.104.222.206 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.052419 ARP, Request who-has 128.104.223.131 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.059039 ARP, Request who-has 128.104.223.101 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.059099 ARP, Request who-has 128.105.147.156 (Broadcast) tell 128.105.144.3, length 46
+11:40:41.065689 ARP, Request who-has 128.104.223.157 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.085674 ARP, Request who-has 128.104.222.93 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.085720 ARP, Request who-has 128.105.147.14 (Broadcast) tell 128.105.144.3, length 46
+11:40:41.092537 ARP, Request who-has 128.104.223.9 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.109022 ARP, Request who-has 128.104.222.216 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.119204 ARP, Request who-has 128.105.147.68 (Broadcast) tell 128.105.144.3, length 46
+11:40:41.119250 ARP, Request who-has 128.105.147.48 (Broadcast) tell 128.105.144.3, length 46
+11:40:41.125812 ARP, Request who-has 128.105.147.7 (Broadcast) tell 128.105.144.3, length 46
+11:40:41.130171 ARP, Request who-has 128.105.144.7 (Broadcast) tell 128.105.144.3, length 46
+11:40:41.152378 ARP, Request who-has dyn-128-105-146-134.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:41.162349 ARP, Request who-has 128.105.146.250 (Broadcast) tell 128.105.144.3, length 46
+11:40:41.175667 ARP, Request who-has 128.104.222.240 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.189286 ARP, Request who-has 128.105.147.69 (Broadcast) tell 128.105.144.3, length 46
+11:40:41.199064 ARP, Request who-has 128.104.222.67 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.205732 ARP, Request who-has 128.105.146.200 (Broadcast) tell 128.105.144.3, length 46
+11:40:41.219849 ARP, Request who-has 128.105.147.43 (Broadcast) tell 128.105.144.3, length 46
+11:40:41.219877 ARP, Request who-has 128.104.223.21 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.220208 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 6921:7029, ack 9424, win 16382, length 108
+11:40:41.231167 IP 10.130.6.2.1985 > 224.0.0.102.1985: HSRPv1
+11:40:41.232386 ARP, Request who-has 128.104.222.142 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.232491 ARP, Request who-has 128.105.147.166 (Broadcast) tell 128.105.144.3, length 46
+11:40:41.242338 ARP, Request who-has 128.104.223.230 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.242403 ARP, Request who-has dyn-128-105-146-115.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:41.249141 ARP, Request who-has 128.104.222.146 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.269069 ARP, Request who-has 128.105.147.237 (Broadcast) tell 128.105.144.3, length 46
+11:40:41.271733 ARP, Request who-has dyn-128-105-146-170.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:41.282984 ARP, Request who-has 128.104.223.47 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.283067 ARP, Request who-has c220g2-031132.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:41.285037 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 7029:7137, ack 9424, win 16382, length 108
+11:40:41.295797 ARP, Request who-has 128.104.222.202 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.302484 ARP, Request who-has 128.104.222.114 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.305503 ARP, Request who-has 128.104.222.23 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.314155 ARP, Request who-has 128.104.223.225 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.318354 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 7137:7229, ack 9424, win 16382, length 92
+11:40:41.319188 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 9424:9548, ack 7029, win 9656, length 124
+11:40:41.345722 ARP, Request who-has 128.105.147.129 (Broadcast) tell 128.105.144.3, length 46
+11:40:41.351458 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 7229:7337, ack 9424, win 16382, length 108
+11:40:41.352487 ARP, Request who-has 128.105.146.57 (Broadcast) tell 128.105.144.3, length 46
+11:40:41.358227 ARP, Request who-has 128.105.147.167 (Broadcast) tell 128.105.144.3, length 46
+11:40:41.362491 ARP, Request who-has pool-node-0-128-105-146-151.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:41.372165 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 7337:7453, ack 9548, win 16381, length 116
+11:40:41.374547 IP6 fe80::eab2:65ff:fe42:30b4 > ff02::1:ffee:bfa4: ICMP6, neighbor solicitation, who has fe80::3eec:efff:feee:bfa4, length 32
+11:40:41.389011 ARP, Request who-has 128.105.147.183 (Broadcast) tell 128.105.144.3, length 46
+11:40:41.389875 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 9548:9680, ack 7137, win 9656, length 132
+11:40:41.404377 ARP, Request who-has 128.104.223.190 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.420025 ARP, Request who-has 128.104.222.119 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.420715 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 9680:9796, ack 7229, win 9656, length 116
+11:40:41.422321 ARP, Request who-has 128.104.223.88 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.425168 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 7453:7561, ack 9680, win 16381, length 108
+11:40:41.429066 ARP, Request who-has 128.104.223.192 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.433481 STP 802.1w, Rapid STP, Flags [Learn, Forward], bridge-id 80d3.cc:ed:4d:c2:17:a7.8075, length 42
+11:40:41.435666 ARP, Request who-has 128.104.222.117 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.435772 ARP, Request who-has dyn-128-105-146-158.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:41.439008 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 7561:7661, ack 9680, win 16381, length 100
+11:40:41.440594 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 7661:7865, ack 9680, win 16381, length 204
+11:40:41.450036 ARP, Request who-has dyn-128-105-146-146.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:41.451485 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 9796:9920, ack 7337, win 9656, length 124
+11:40:41.455253 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 7865:7965, ack 9796, win 16380, length 100
+11:40:41.455805 ARP, Request who-has 128.105.147.98 (Broadcast) tell 128.105.144.3, length 46
+11:40:41.472524 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 9920:10084, ack 7453, win 9656, length 164
+11:40:41.475714 ARP, Request who-has 128.104.223.65 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.475763 ARP, Request who-has 128.104.223.163 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.493930 ARP, Request who-has 128.105.147.78 (Broadcast) tell 128.105.144.3, length 46
+11:40:41.505658 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 10084, win 16379, length 0
+11:40:41.515751 ARP, Request who-has 128.104.223.174 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.522021 ARP, Request who-has dyn-128-105-146-105.wisc.cloudlab.us (Broadcast) tell 128.105.144.3, length 46
+11:40:41.529368 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 10084:10208, ack 7561, win 9656, length 124
+11:40:41.532343 ARP, Request who-has 128.105.147.19 (Broadcast) tell 128.105.144.3, length 46
+11:40:41.532403 ARP, Request who-has 128.104.223.43 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.539097 ARP, Request who-has 128.104.223.82 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.542969 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [.], ack 7865, win 9656, length 0
+11:40:41.543245 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 10208:10324, ack 7865, win 9656, length 116
+11:40:41.547878 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 10480:10620, ack 7965, win 9656, length 140
+11:40:41.555962 ARP, Request who-has 128.104.223.221 (Broadcast) tell 128.104.222.3, length 46
+11:40:41.556106 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 10324:10480, ack 7865, win 9656, length 156
+11:40:41.577029 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 10324, win 16383, length 0
+11:40:41.581488 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 10324, win 16383, options [nop,nop,sack 1 {10480:10620}], length 0
+11:40:41.582432 ARP, Request who-has 128.105.147.74 (Broadcast) tell 128.105.144.3, length 46
+11:40:41.589248 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [.], ack 10620, win 16382, length 0
+11:40:41.590932 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 7965:8073, ack 10620, win 16382, length 108
+11:40:41.591247 IP nat-128-62-79-89.public.utexas.edu.8060 > c220g5-111230.wisc.cloudlab.us.ssh: Flags [P.], seq 8073:8197, ack 10620, win 16382, length 124
+11:40:41.592492 IP6 fe80::8e:6bff:fe85:4f62.dhcpv6-client > ff02::1:2.dhcpv6-server: dhcp6 inf-req
+11:40:41.594736 IP c220g5-111230.wisc.cloudlab.us.ssh > nat-128-62-79-89.public.utexas.edu.8060: Flags [P.], seq 10620:10736, ack 7965, win 9656, length 116
+11:40:41.598996 ARP, Request who-has 128.104.223.122 (Broadcast) tell 128.104.222.3, length 46
